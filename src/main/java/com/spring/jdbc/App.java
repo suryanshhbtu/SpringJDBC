@@ -15,10 +15,9 @@ public class App
         ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
         
         StudentDAO studentDAO = context.getBean("studentDAO", StudentDAO.class);
-        
-        Student std = new Student(6, "Shivam", "Afganistan");
-        int res = studentDAO.insert(std);
-        System.out.println(res);
+        Student std = new Student(6, "Shivam", "Meerut");
+        int res = studentDAO.change(std);
+        System.out.println("Data Changed in "+res+" rows.");
         
     }
 }
