@@ -16,7 +16,7 @@ public class App
         
         StudentDAO studentDAO = context.getBean("studentDAO", StudentDAO.class);
         Student std = new Student(6, "Shivam", "Meerut");
-        int res = studentDAO.change(std);
+        int res = studentDAO.delete(4);
         System.out.println("Data Changed in "+res+" rows.");
         
     }
