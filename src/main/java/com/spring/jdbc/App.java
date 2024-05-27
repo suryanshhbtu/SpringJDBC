@@ -1,5 +1,7 @@
 package com.spring.jdbc;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -17,8 +19,8 @@ public class App
         StudentDAO studentDAO = context.getBean("studentDAO", StudentDAO.class);
 //        Student std = new Student(6, "Shivam", "Meerut");
 //        int res = studentDAO.delete(4);
-        Student std = studentDAO.getStudent(1);
-        System.out.println(std);
+        List<Student> list = studentDAO.getAllStudent();
+        System.out.println(list);
         
     }
 }
