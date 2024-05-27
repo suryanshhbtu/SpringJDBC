@@ -13,11 +13,12 @@ public class App
     {
         System.out.println( "Hello World!" );
         ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
-        
+//        
         StudentDAO studentDAO = context.getBean("studentDAO", StudentDAO.class);
-        Student std = new Student(6, "Shivam", "Meerut");
-        int res = studentDAO.delete(4);
-        System.out.println("Data Changed in "+res+" rows.");
+//        Student std = new Student(6, "Shivam", "Meerut");
+//        int res = studentDAO.delete(4);
+        Student std = studentDAO.getStudent(6);
+        System.out.println(std);
         
     }
 }
