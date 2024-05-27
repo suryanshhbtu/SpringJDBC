@@ -17,7 +17,7 @@ public class App
         StudentDAO studentDAO = context.getBean("studentDAO", StudentDAO.class);
 //        Student std = new Student(6, "Shivam", "Meerut");
 //        int res = studentDAO.delete(4);
-        Student std = studentDAO.getStudent(6);
+        Student std = studentDAO.getStudent(1);
         System.out.println(std);
         
     }
